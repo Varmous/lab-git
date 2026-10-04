@@ -1,9 +1,9 @@
 """CLI-программа: вычисление чисел Фибоначчи и 20-угольных чисел.
 
 Использование:
-    python main.py fib     - вычислить число Фибоначчи
-    python main.py fig     - вычислить 20-угольное число
-    python main.py         - показать справку
+    py main.py fib     - вычислить число Фибоначчи
+    py main.py fig     - вычислить 20-угольное число
+    py main.py         - показать справку
 """
 
 import sys
@@ -46,9 +46,9 @@ def run_figurate() -> int:
 def print_help() -> int:
     """Показывает справку."""
     print("Использование:")
-    print("  python main.py fib   - вычислить число Фибоначчи F(n), n >= 0")
-    print("  python main.py fig   - вычислить 20-угольное число P(n), n >= 1")
-    print("  python main.py       - показать эту справку")
+    print("  py main.py fib   - вычислить число Фибоначчи F(n), n >= 0")
+    print("  py main.py fig   - вычислить 20-угольное число P(n), n >= 1")
+    print("  py main.py       - показать эту справку")
     return 0
 
 
