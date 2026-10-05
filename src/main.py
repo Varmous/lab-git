@@ -1,11 +1,3 @@
-"""CLI-программа: вычисление чисел Фибоначчи и 20-угольных чисел.
-
-Использование:
-    py main.py fib     - вычислить число Фибоначчи
-    py main.py fig     - вычислить 20-угольное число
-    py main.py         - показать справку
-"""
-
 import sys
 
 from fibonacci import fibonacci
@@ -13,7 +5,6 @@ from figurate import twenty_gonal
 
 
 def ask_n(min_value: int, label: str) -> int:
-    """Запрашивает у пользователя целое число n >= min_value."""
     while True:
         raw = input(f"Введите n для {label} (n >= {min_value}): ").strip()
         try:
@@ -28,7 +19,6 @@ def ask_n(min_value: int, label: str) -> int:
 
 
 def run_fibonacci() -> int:
-    """Спрашивает n и выводит число Фибоначчи."""
     n = ask_n(min_value=0, label="числа Фибоначчи")
     result = fibonacci(n)
     print(f"F({n}) = {result}")
@@ -36,7 +26,6 @@ def run_fibonacci() -> int:
 
 
 def run_figurate() -> int:
-    """Спрашивает n и выводит 20-угольное число."""
     n = ask_n(min_value=1, label="20-угольного числа")
     result = twenty_gonal(n)
     print(f"P20({n}) = {result}")
@@ -44,7 +33,6 @@ def run_figurate() -> int:
 
 
 def print_help() -> int:
-    """Показывает справку."""
     print("Использование:")
     print("  py main.py fib   - вычислить число Фибоначчи F(n), n >= 0")
     print("  py main.py fig   - вычислить 20-угольное число P(n), n >= 1")
@@ -53,7 +41,6 @@ def print_help() -> int:
 
 
 def main() -> int:
-    """Точка входа."""
     if len(sys.argv) < 2:
         return print_help()
 
